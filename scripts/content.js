@@ -25,8 +25,7 @@ function urlChangeHandler(event) {
     qr.style="border:5px solid white; border-radius:3px;";
 
     logoWrapper = document.createElement("div");
-    
-    
+    logoWrapper.style = "display: inline-flex;";
      
     image=document.createElement("img");
     image.src=chrome.runtime.getURL("images/icon-48.png");
