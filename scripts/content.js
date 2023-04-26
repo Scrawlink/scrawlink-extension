@@ -3,6 +3,8 @@ document.addEventListener("keyup", urlChangeHandler)
 
 let qr, loc
 
+const shortenerURL = "https://scrawl.tacha7297.workers.dev/";
+
 function urlChangeHandler(event) {
 
   qr = window.document.getElementById("qrcode")
@@ -55,7 +57,30 @@ function urlChangeHandler(event) {
     })}
 
     if (loc != window.location.href){
+
       loc = window.location.href;
-      qrc.makeCode(loc);
+
+      const request = new Request(shortenerURL, {
+        method: "POST",
+        body: '{"url": "' +  window.location.href + '"}',
+      });
+
+      fetch(request)
+        .then((response) => {
+          if (response.status === 200) {
+            return response.json();
+          } else {
+            throw new Error("Something went wrong on API server!");
+          }
+        })
+        .then((response) => {
+          console.log(response);
+          qrc.clear();
+          let url = shortenerURL + response.key
+          qrc.makeCode(url);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
     }
 }
