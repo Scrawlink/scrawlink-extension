@@ -14,7 +14,8 @@
   
   
   wrapper.onclick = function(){
-    window.open('./instructions.html');
+    console.log('clicked');
+    window.open('https://www.scraw.link/instructions.html');
   }
   
   image=document.createElement("img");
