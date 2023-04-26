@@ -14,7 +14,7 @@
   
   
   wrapper.onclick = function(){
-    window.location.href = './instructions.html';
+    window.open('./instructions.html');
   }
   
   image=document.createElement("img");
