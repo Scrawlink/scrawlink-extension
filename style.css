@@ -11,6 +11,8 @@ body, html
   padding: 10px;
   font-size: 14px;
   margin: 10%;
+  margin: 0 auto;
+  max-width: 800px;
 }
 #targetPage
 {
