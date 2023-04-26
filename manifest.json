@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "ScrawLink",
+  "version": "0.0.1",
+  "description": "Share the QR code of you current url. Designed to share the code of live coding performances that use web based environments such as Hydra https://hydra.ojack.xyz/ and Strudel https://strudel.tidalcycles.org/.",
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/qrcode.min.js", "scripts/content.js"],
+      "matches": [
+        "*://hydra.ojack.xyz/*",
+        "*://strudel.tidalcycles.org/*"
+      ],
+      "resources": ["images/icon-48.png"]
+      }],
+      "web_accessible_resources": [{
+        "matches": [
+          "<all_urls>"
+        ],
+        "resources": ["images/icon-48.png"]
+      }
+    ]
+  }
