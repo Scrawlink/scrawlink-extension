@@ -38,7 +38,7 @@ function urlChangeHandler(event) {
     image.src=chrome.runtime.getURL("images/icon-48.png");
     image.style="height:20px";
     logoText = document.createElement("div");
-    logoText.innerHTML = "scraw.link";
+    logoText.innerHTML = "www.scraw.link";
     logoText.style="display: inline; color: #00ff00;font-family: monospace;font-size: 14px;font-weight: bold; margin: 5px;";
 
     logoWrapper.appendChild(image);
