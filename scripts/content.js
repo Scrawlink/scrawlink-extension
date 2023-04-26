@@ -1,4 +1,11 @@
 
+if (document.location.href.includes("scraw.link")){
+    linked = new URL(window.location.href).searchParams.get('u')
+    if (linked){
+      window.location.href = linked;
+    }
+}
+
 document.addEventListener("keyup", urlChangeHandler)
 
 let qr, loc
