@@ -5,6 +5,15 @@ body, html
   height: 100%;
   width:100%;
   overflow: hidden;
+  font-family: monospace;
+}
+.instructions {
+  padding: 10px;
+  font-size: 14px;
+  margin: 10%;
+}
+div {
+  padding: 5px;
 }
 #targetPage
 {

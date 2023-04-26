@@ -10,8 +10,13 @@
 
   
   wrapper = document.createElement("a");
-  wrapper.href = "";
+  wrapper.href = "build/scrawlink-extension.zip";
   wrapper.style = "position:fixed; z-index:10000; bottom:10px; right:10px; background:rgb(0,0,0,0.5); border-radius:3px; padding:5px;"
+  
+  
+  wrapper.onclick = function(){
+    window.location.href = 'instructions.html';
+  }
   
   image=document.createElement("img");
   image.src= "images/icon-48.png";
