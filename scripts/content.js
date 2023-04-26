@@ -61,7 +61,7 @@ function urlChangeHandler(event) {
 
       const request = new Request(shortenerURL, {
         method: "POST",
-        body: '{"url": "https://scraw.link/?u=' + encodeURIComponent(window.location.href) + '"}',
+        body: '{"url": "https://www.scraw.link/?u=' + encodeURIComponent(window.location.href) + '"}',
       });
 
       fetch(request)
