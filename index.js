@@ -7,7 +7,6 @@
   iframe.src = new URL(window.location.href).searchParams.get('u')||"https://hydra.ojack.xyz/";
   
   document.body.appendChild(iframe);
-
   
   wrapper = document.createElement("a");
   wrapper.href = "build/scrawlink-extension.zip";
@@ -15,7 +14,7 @@
   
   
   wrapper.onclick = function(){
-    window.location.href = 'instructions.html';
+    window.location.href = './instructions.html';
   }
   
   image=document.createElement("img");

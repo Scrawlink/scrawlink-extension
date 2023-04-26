@@ -12,9 +12,6 @@ body, html
   font-size: 14px;
   margin: 10%;
 }
-div {
-  padding: 5px;
-}
 #targetPage
 {
   position:absolute; 
