@@ -9,6 +9,7 @@ body, html
   color: #00ff00;
   font-size: 14px;
   font-weight: bold;
+  background: rgba(0,20,0,.85);
 }
 a
 {
