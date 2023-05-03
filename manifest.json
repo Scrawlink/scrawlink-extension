@@ -11,19 +11,26 @@
   },
   "content_scripts": [
     {
+      "css": ["style.css"],
       "js": ["scripts/qrcode.min.js", "scripts/content.js"],
       "matches": [
         "*://hydra.ojack.xyz/*",
         "*://strudel.tidalcycles.org/*",
         "*://*.scraw.link/*"
       ],
-      "resources": ["images/icon-48.png"]
+      "resources": [
+        "images/icon-48.png",
+        "images/telegram.svg"
+      ]
       }],
       "web_accessible_resources": [{
         "matches": [
           "<all_urls>"
         ],
-        "resources": ["images/icon-48.png"]
+        "resources": [
+          "images/icon-48.png",
+           "images/telegram.svg"
+         ]
       }
     ]
   }

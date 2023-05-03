@@ -18,7 +18,8 @@ function urlChangeHandler(event) {
   if (!qr) {
     wrapper = document.createElement("div");
     wrapper.style = "position:fixed; z-index:10000; bottom:10px; right:10px; background:rgb(0,0,0,0.5); border-radius:3px; padding:5px;"
-
+    wrapper.id= "scrawlink";
+    
     wrapper.addEventListener("click",function(element) {
       if (wrapper.style.bottom!="10px"){
         wrapper.style.bottom = "10px";
@@ -45,8 +46,19 @@ function urlChangeHandler(event) {
     logoWrapper.appendChild(logoText);
     
     text = document.createElement("div");
-    text.innerHTML = "¡Juega con este live desde tu móvil!";
-    text.style="color: #00ff00;font-family: sans-serif;font-size: 11px;font-weight: 600;width: 200px;";
+    text.innerHTML = "Get this code and play!";
+    text.style="color: #00ff00;font-family: sans-serif;font-size: 1em;font-weight: 600;width: 200px;";
+
+    at = document.createElement("a");
+    at.href = "https://t.me/ScrawLink";
+    at.style ="float:right; padding: 5px;";
+
+    telegram = document.createElement("img");
+    telegram.src=chrome.runtime.getURL("images/telegram.svg");
+    telegram.title="ScrawLink Telegram group"
+    telegram.style=" background:rgb(0,255,0); border-radius:5px; width: 15px;";
+    at.appendChild(telegram);
+    wrapper.appendChild(at)
 
     wrapper.appendChild(logoWrapper)
     wrapper.appendChild(text);

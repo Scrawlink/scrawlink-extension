@@ -26,10 +26,10 @@
   image.style="height:20px";
   logoText = document.createElement("div");
   logoText.innerHTML = "Get scraw.link extension";
-  logoText.style="display: inline;  margin: 5px;";
+  logoText.style="display: inline; background:00FF00; margin: 5px;";
 
   telegram = document.createElement("div");
-  telegram.innerHTML = "Join <a href='https://t.me/+WC6bX1jGnhA5ZTk8'>Scraw.Link Telegram group</a>"
+  telegram.innerHTML = "Join <a href='https://t.me/ScrawLink'>Scraw.Link Telegram group</a>"
 
 
   link.appendChild(image);

@@ -16,8 +16,9 @@ a
   color: #00FF00;
   text-decoration: none;
 }
-a:hover {
-  text-decoration: underline;
+
+#scrawlink a:hover {
+  background-color: unset;
 }
 
 
