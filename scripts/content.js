@@ -17,16 +17,12 @@ function urlChangeHandler(event) {
   qr = window.document.getElementById("qrcode")
   if (!qr) {
     wrapper = document.createElement("div");
-    wrapper.style = "position:fixed; z-index:10000; bottom:10px; right:10px; background:rgb(0,0,0,0.5); border-radius:3px; padding:5px;"
     wrapper.id= "scrawlink";
     
     wrapper.addEventListener("click",function(element) {
-      if (wrapper.style.bottom!="10px"){
-        wrapper.style.bottom = "10px";
-      } else {
-        wrapper.style.bottom = "-200px";
-      }
-    });
+      console.log("clicked!");
+      wrapper.classList.toggle("minimized");
+    })
 
     qr=document.createElement("div");
     qr.id="qrcode";
