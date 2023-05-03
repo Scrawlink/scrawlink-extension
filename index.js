@@ -13,25 +13,29 @@
   wrapper.style = "position:fixed; z-index:10000; bottom:10px; right:10px; background:rgb(0,0,0,0.5); border-radius:3px; padding:5px;"
   
   link = document.createElement("a");
-  link.href = "build/scrawlink-extension.zip";
-
-  
-  link.onclick = function(){
-    console.log('clicked');
-    window.open('https://www.scraw.link/instructions.html');
-  }
+  link.href = "https://chrome.google.com/webstore/detail/scrawlink/ahmclabepobeghadiggbcihbccomifoe";
+  link.target = "_blank";
   
   image=document.createElement("img");
   image.src= "images/icon-48.png";
   image.style="height:20px";
   logoText = document.createElement("div");
   logoText.innerHTML = "Get scraw.link extension";
-  logoText.style="display: inline; background:00FF00; margin: 5px;";
 
-  telegram = document.createElement("div");
-  telegram.innerHTML = "Join <a href='https://t.me/ScrawLink'>Scraw.Link Telegram group</a>"
+  telegram = document.createElement("a");
+  telegram.href = "https://t.me/ScrawLink";
+  telegram.target = "_blank";
 
-
+  telegramTxt = document.createElement("div")
+  telegramTxt.innerHTML = "Join Scraw.Link Telegram group";
+  
+  telegramImg = document.createElement("img");
+  telegramImg.src="images/telegram.svg";
+  telegramImg.title="ScrawLink Telegram group"
+  telegramImg.style=" background:rgb(0,255,0); border-radius:5px; width: 15px;";
+  telegram.appendChild(telegramImg);
+  telegram.appendChild(telegramTxt);
+  
   link.appendChild(image);
   link.appendChild(logoText);
 
@@ -39,6 +43,5 @@
   wrapper.appendChild(telegram);
   
   document.body.appendChild(wrapper);
-  document.body.appendChild(wrapper2);
   
   

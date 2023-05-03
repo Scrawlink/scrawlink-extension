@@ -46,7 +46,19 @@ a
   line-height: 1.5;
 }
 .instructions div {
-  padding: 10px;
+  margin: 5px;
+  display: inline-block;
+}
+
+.instructions a {
+  display: block;
+}
+
+.instructions img {
+  height:20px;
+  margin-right:5px;
+  left: 0px;
+  
 }
 #targetPage
 {
