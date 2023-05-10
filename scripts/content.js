@@ -7,6 +7,8 @@ if (document.location.href.includes("scraw.link")){
 }
 
 document.addEventListener("keyup", urlChangeHandler)
+document.addEventListener("click", urlChangeHandler)
+
 
 let qr, loc
 
