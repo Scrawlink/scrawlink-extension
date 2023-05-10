@@ -16,7 +16,8 @@
       "matches": [
         "*://hydra.ojack.xyz/*",
         "*://strudel.tidalcycles.org/*",
-        "*://*.scraw.link/*"
+        "*://*.scraw.link/*",
+        "*://sebpiq.github.io/*"
       ],
       "resources": [
         "images/icon-48.png",
