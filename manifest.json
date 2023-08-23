@@ -14,8 +14,8 @@
       "css": ["style.css"],
       "js": ["scripts/qrcode.min.js", "scripts/content.js"],
       "matches": [
-        "*://hydra.ojack.xyz/*",
-        "*://strudel.tidalcycles.org/*",
+        "*://hydra.ojack.xyz/?*",
+        "*://strudel.tidalcycles.org/",
         "*://*.scraw.link/*",
         "*://sebpiq.github.io/*"
       ],
