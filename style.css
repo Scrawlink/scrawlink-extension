@@ -1,4 +1,4 @@
-body, html
+#scrawlink body, #scrawlink html
 {
   margin: 0;
   padding: 0;
@@ -11,7 +11,7 @@ body, html
   font-weight: bold;
   background: rgba(0,20,0,.85);
 }
-a
+#scrawlink a
 {
   color: #00FF00;
   text-decoration: none;
