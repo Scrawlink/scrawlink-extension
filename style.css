@@ -37,6 +37,11 @@
   right: -185px;
 }
 
+#scrawlink #qrcode{
+  border:5px solid white;
+  border-radius:3px;
+}
+
 .instructions {
   padding: 10px;
   font-size: 14px;

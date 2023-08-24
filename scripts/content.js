@@ -1,4 +1,3 @@
-
 if (document.location.href.includes("scraw.link")){
     linked = new URL(window.location.href).searchParams.get('u')
     if (linked){
@@ -22,13 +21,15 @@ function urlChangeHandler(event) {
     wrapper.id= "scrawlink";
     
     wrapper.addEventListener("click",function(element) {
-      console.log("clicked!");
       wrapper.classList.toggle("minimized");
     })
 
-    qr=document.createElement("div");
-    qr.id="qrcode";
-    qr.style="border:5px solid white; border-radius:3px;";
+    qrWrapper=document.createElement("div");
+    qrWrapper.id="qrcode";
+
+    qr = document.createElement("a");
+    qr.target = "_blank";
+    qrWrapper.appendChild(qr);
 
     logoWrapper = document.createElement("div");
     logoWrapper.style = "display: inline-flex;";
@@ -60,7 +61,7 @@ function urlChangeHandler(event) {
 
     wrapper.appendChild(logoWrapper)
     wrapper.appendChild(text);
-    wrapper.appendChild(qr);
+    wrapper.appendChild(qrWrapper);
     window.document.body.appendChild(wrapper);
 
     qrc = new QRCode(qr, {
@@ -94,6 +95,7 @@ function urlChangeHandler(event) {
           qrc.clear();
           let url = shortenerURL + response.key
           qrc.makeCode(url);
+          qr.href=url;
         })
         .catch((error) => {
           console.error(error);
