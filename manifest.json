@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "ScrawLink",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Share the QR code of your live coding performances that use web based environments such as Hydra and Strudel",
   "icons": {
     "16": "images/icon-16.png",
