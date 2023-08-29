@@ -5,6 +5,15 @@ if (document.location.href.includes("scraw.link")){
     }
 }
 
+let fa = document.createElement("link")
+fa.setAttribute("rel", "stylesheet")
+fa.setAttribute("href", "https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" )
+fa.setAttribute("integrity","sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=")
+fa.setAttribute("crossorigin","anonymous")
+document.head.appendChild(fa)
+console.log(document.head);
+
+
 document.addEventListener("keyup", urlChangeHandler)
 document.addEventListener("click", urlChangeHandler)
 
@@ -52,10 +61,9 @@ function urlChangeHandler(event) {
     at.href = "https://t.me/ScrawLink";
     at.style ="float:right; padding: 5px;";
 
-    telegram = document.createElement("img");
-    telegram.src=chrome.runtime.getURL("images/telegram.svg");
+    telegram = document.createElement("i");
+    telegram.classList.add("fa","fa-telegram", "fa-lg");
     telegram.title="ScrawLink Telegram group"
-    telegram.style=" background:rgb(0,255,0); border-radius:5px; width: 15px;";
     at.appendChild(telegram);
     wrapper.appendChild(at)
 
