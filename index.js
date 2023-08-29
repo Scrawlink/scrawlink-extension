@@ -9,8 +9,8 @@
   document.body.appendChild(iframe);
   
   wrapper = document.createElement("div");
-  wrapper.className += "instructions";
-  wrapper.style = "position:fixed; z-index:10000; bottom:10px; right:10px; background:rgb(0,0,0,0.5); border-radius:3px; padding:5px;"
+  wrapper.id += "scrawlink";
+  wrapper.classList.add("instructions");
   
   link = document.createElement("a");
   link.href = "https://chrome.google.com/webstore/detail/scrawlink/ahmclabepobeghadiggbcihbccomifoe";
@@ -29,10 +29,10 @@
   telegramTxt = document.createElement("div")
   telegramTxt.innerHTML = "Join Scraw.Link Telegram group";
   
-  telegramImg = document.createElement("img");
-  telegramImg.src="images/telegram.svg";
-  telegramImg.title="ScrawLink Telegram group"
-  telegramImg.style=" background:rgb(0,255,0); border-radius:5px; width: 15px;";
+  telegramImg = document.createElement("i");
+  telegram.classList.add("fa","fa-telegram");
+  telegramImg.title="ScrawLink Telegram group";
+
   telegram.appendChild(telegramImg);
   telegram.appendChild(telegramTxt);
   
