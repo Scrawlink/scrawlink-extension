@@ -42,29 +42,15 @@
   border-radius:3px;
 }
 
-.instructions {
-  padding: 10px;
-  font-size: 14px;
-  margin: 10%;
-  margin: 0 auto;
-  max-width: 800px;
-  line-height: 1.5;
-}
-.instructions div {
-  margin: 5px;
-  display: inline-block;
+#scrawlink.instructions a {
+  display: flex;
+  padding: 5px;
 }
 
-.instructions a {
-  display: block;
+#scrawlink.instructions div {
+  padding-left: 5px;
 }
 
-.instructions img {
-  height:20px;
-  margin-right:5px;
-  left: 0px;
-  
-}
 #targetPage
 {
   position:absolute; 
