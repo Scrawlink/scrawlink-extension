@@ -1,3 +1,5 @@
+#builds
+.build/*
 # Logs
 logs
 *.log
