@@ -28,7 +28,7 @@ function urlChangeHandler(event) {
   if (!qr) {
     wrapper = document.createElement("div");
     wrapper.id= "scrawlink";
-    
+
     wrapper.addEventListener("click",function(element) {
       wrapper.classList.toggle("minimized");
     })
@@ -42,9 +42,9 @@ function urlChangeHandler(event) {
 
     logoWrapper = document.createElement("div");
     logoWrapper.style = "display: inline-flex;";
-     
+
     image=document.createElement("img");
-    image.src=chrome.runtime.getURL("images/icon-48.png");
+    image.src="https://cdn.jsdelivr.net/gh/Scrawlink/scrawlink-extension/images/icon-48.png"
     image.style="height:20px";
     logoText = document.createElement("div");
     logoText.innerHTML = "www.scraw.link";
@@ -52,7 +52,7 @@ function urlChangeHandler(event) {
 
     logoWrapper.appendChild(image);
     logoWrapper.appendChild(logoText);
-    
+
     text = document.createElement("div");
     text.innerHTML = "Get this code and play!";
     text.style="color: #00ff00;font-family: sans-serif;font-size: 1em;font-weight: 600;width: 200px;";
