@@ -5,18 +5,8 @@ if (document.location.href.includes("scraw.link")){
     }
 }
 
-let fa = document.createElement("link")
-fa.setAttribute("rel", "stylesheet")
-fa.setAttribute("href", "https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" )
-fa.setAttribute("integrity","sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=")
-fa.setAttribute("crossorigin","anonymous")
-document.head.appendChild(fa)
-console.log(document.head);
-
-
 document.addEventListener("keyup", urlChangeHandler)
 document.addEventListener("click", urlChangeHandler)
-
 
 let qr, loc
 
