@@ -72,12 +72,17 @@ function urlChangeHandler(event) {
     })}
 
     if (loc != window.location.href){
-
       loc = window.location.href;
 
       const request = new Request(shortenerURL, {
         method: "POST",
-        body: '{"url": "https://www.scraw.link/?u=' + encodeURIComponent(window.location.href) + '"}',
+        body: '{"url": "https://www.scraw.link/?u='
+          + encodeURIComponent(window.location.href)
+          // previous state url
+          + '&p=' + encodeURIComponent(qr.href)
+          // new code timestamp
+          + '&t=' + encodeURIComponent(Date.now())
+          + '"}',
       });
 
       fetch(request)
