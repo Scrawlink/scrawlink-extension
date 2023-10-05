@@ -11,10 +11,11 @@
   },
   "content_scripts": [
     {
-      "css": ["style.css"],
+      "css": ["style.css",
+        "scripts/fork-awesome.min.css"
+      ],
       "js": [
         "scripts/qrcode.min.js",
-        "scripts/fork-awesome.min.js",
         "scripts/content.js"
       ],
       "matches": [
