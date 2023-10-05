@@ -1,6 +1,18 @@
+// previous and next URLs, to navigate to previous states.
+// TODO implement navigation to previous and next states
+
+let scrawLinkStatus = {
+  prev : '',
+  prevTime : 0,
+  next: ''
+}
+
 if (document.location.href.includes("scraw.link")){
-    linked = new URL(window.location.href).searchParams.get('u')
+    url = new URL(window.location.href).searchParams
+    linked = url.get('u')
     if (linked){
+      scrawLinkStatus.prev = url.get('p')
+      scrawLinkStatus.prevTime = url.get('t')
       window.location.href = linked;
     }
 }
@@ -72,16 +84,20 @@ function urlChangeHandler(event) {
     })}
 
     if (loc != window.location.href){
+      scrawLinkStatus.prev = qr.href;
+      scrawLinkStatus.prevTime = Date.now();
       loc = window.location.href;
+
+      console.log("CONTENTJS Logs;: ",scrawLinkStatus.prev, scrawLinkStatus.prevTime);
 
       const request = new Request(shortenerURL, {
         method: "POST",
         body: '{"url": "https://www.scraw.link/?u='
           + encodeURIComponent(window.location.href)
           // previous state url
-          + '&p=' + encodeURIComponent(qr.href)
+          + '&p=' + encodeURIComponent(scrawLinkStatus.prev)
           // new code timestamp
-          + '&t=' + encodeURIComponent(Date.now())
+          + '&t=' + encodeURIComponent(scrawLinkStatus.prevTime)
           + '"}',
       });
 
