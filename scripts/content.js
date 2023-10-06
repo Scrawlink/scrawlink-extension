@@ -88,8 +88,6 @@ function urlChangeHandler(event) {
       scrawLinkStatus.prevTime = Date.now();
       loc = window.location.href;
 
-      console.log("CONTENTJS Logs;: ",scrawLinkStatus.prev, scrawLinkStatus.prevTime);
-
       const request = new Request(shortenerURL, {
         method: "POST",
         body: '{"url": "https://www.scraw.link/?u='
