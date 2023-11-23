@@ -22,7 +22,8 @@
         "*://hydra.ojack.xyz/?*",
         "*://strudel.tidalcycles.org/",
         "*://*.scraw.link/*",
-        "*://sebpiq.github.io/*"
+        "*://sebpiq.github.io/*",
+        "*://strudel.cc/"
       ],
       "resources": [
         "images/icon-48.png",
