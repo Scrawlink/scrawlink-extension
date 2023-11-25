@@ -17,15 +17,15 @@ if (typeof attrib === 'undefined') {
   window.attrib = prompt('What\'s your name and email for attribution?', 'Flying S. Monster <veganmeatballs@sky.net>')
 }
 
-let found = false;
 
 if (typeof treeWalker === 'undefined') {
 
-  window.treeWalker = document.createTreeWalker(document,NodeFilter.SHOW_TEXT);
+ treeWalker = document.createTreeWalker(document,NodeFilter.SHOW_TEXT);
 
 
   let url = document.getElementById('qrcode').children[0].href //shortened URL
 
+  let found = false;
   while (treeWalker.nextNode() && ! found) {
     const node = treeWalker.currentNode;
     let attRep = node.data.replace(

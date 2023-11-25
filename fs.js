@@ -2,7 +2,7 @@
 # From Scrawl
 @title From Scrawl
 scrawl @by Ámbar Tenorio <ambar@atenor.io>
-@license CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/
+@license CC BY-SA https://creativecommons.org/licenses/by-sa/4.0/
 */
 
 /* ## Rules
@@ -17,33 +17,27 @@ if (typeof attrib === 'undefined') {
   window.attrib = prompt('What\'s your name and email for attribution?', 'Flying S. Monster <veganmeatballs@sky.net>')
 }
 
-let found = false;
 
 if (typeof treeWalker === 'undefined') {
 
-  window.treeWalker = document.createTreeWalker(document,NodeFilter.SHOW_TEXT);
+  const treeWalker = document.createTreeWalker(document,NodeFilter.SHOW_TEXT);
 
 
+  console.log(document.getElementById('qrcode'));
   let url = document.getElementById('qrcode').children[0].href //shortened URL
+  console.log(url);
 
-  while (treeWalker.nextNode() && ! found) {
+  while (treeWalker.nextNode()) {
     const node = treeWalker.currentNode;
-    let attRep = node.data.replace(
-        'scrawl @by ',
-        'scrawl @by ' + attrib + '\n' +
+    node.data = node.data.replace(
+        'scrawl @by',
+        'scrawl @by' + attrib + '\n' +
         'LICENSE CC BY-SA 4.0\n' +
         'Incorporates art and code @by '
       )
 
-    if (node.data != attRep) {
-      node.data = attRep.concat( url);
-    }
+    node.data = node.data.replace('@license', '  under the license');
 
-    let rl = node.data.replace('@license', '  under the license');
-    if (node.data != rl){
-      found = true;
-      node.data = rl;
-    }
     node.data = node.data.replace('LICENSE', '@license');
   }
 }
