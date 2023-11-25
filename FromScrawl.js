@@ -61,7 +61,7 @@ if (typeof c2 === 'undefined'){
 if (typeof to === 'undefined') {
   const to = new Event('fromScrawlTimeout');
   setTimeout(
-    ()=>dispatchEvent(timeout)
+    ()=>dispatchEvent(to)
     ,3 * 60 * 1000); // 180000 miliseconds, no more, no less.
 }
 
