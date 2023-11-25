@@ -24,7 +24,11 @@ if (typeof treeWalker === 'undefined') {
   window.treeWalker = document.createTreeWalker(document,NodeFilter.SHOW_TEXT);
 
 
-  let url = document.getElementById('qrcode').children[0].href //shortened URL
+  let url = '';
+  let qr = document.getElementById('qrcode')
+  if (qr !== null){
+    url = qr.children[0].href //shortened URL
+  }
 
   while (treeWalker.nextNode() && ! found) {
     const node = treeWalker.currentNode;
