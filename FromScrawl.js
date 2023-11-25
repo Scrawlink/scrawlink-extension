@@ -1,7 +1,7 @@
 /*
 # From Scrawl
 @title From Scrawl
-@by Ámbar Tenorio <ambar@atenor.io>
+scrawl @by Ámbar Tenorio <ambar@atenor.io>
 @license CC BY-SA https://creativecommons.org/licenses/by-sa/4.0/
 */
 
@@ -9,15 +9,37 @@
 ### 🔗 Rule 1 (Attribution):
 */
 
-let r1 = '🔗 Rule 1 (Attribution): Start from the scrawls of others and keep the attribution chain.'  
+let r1 = '🔗 Rule 1 (Attribution): Start from the scrawls of others and keep the attribution chain.'
 
 
 if (typeof attrib === 'undefined') {
   window.confirm(r1);
-  window.attrib = prompt('What\'s your name and email for attribution?', 'Flying Spaghetti Monster <veganmeatballs@sky.net>')
+  window.attrib = prompt('What\'s your name and email for attribution?', 'Flying S. Monster <veganmeatballs@sky.net>')
 }
 
-// TODO add a code that keeps the attribution link
+if (typeof treeWalker === 'undefined') {
+  const treeWalker = document.createTreeWalker(document,NodeFilter.SHOW_TEXT);
+
+  let licenseReplaced = false;
+  while (treeWalker.nextNode() && !licenseReplaced) {
+    const node = treeWalker.currentNode;
+      node.data = node.data.replace(
+        'scrawl @by ',
+        'scrawl @by ' + attrib + '\n' +
+        'LICENSE CC BY-SA 4.0\n' +
+        'Incorporates art and code ' +
+        '@by '
+        );
+
+      let r = node.data.replace('@license', '  under the license');
+
+      if (node.data != r){
+        node.data = r;
+        licenseReplaced = true;
+      }
+      node.data = node.data.replace('LICENSE', '@license');
+  }
+}
 
 /*
 ### ⏱ Rule 2 (Hurry!):
@@ -29,8 +51,8 @@ if (typeof c2 === 'undefined'){
   window.c2 = window.confirm(r2);
 }
 
-if (typeof timeout === 'undefined') {
-  const timeout = new Event('fromScrawlTimeout');
+if (typeof to === 'undefined') {
+  const to = new Event('fromScrawlTimeout');
   setTimeout(
     ()=>dispatchEvent(timeout)
     ,3 * 60 * 1000); // 180000 miliseconds, no more, no less.
