@@ -1,4 +1,6 @@
-(add here your links and  From Scrawl sessions)
+You can share your scrawls in the `Scrawl share` channel of our [Telegram group](https://t.me/ScrawLink).
+
+(You can also add here your links to your scrawls and fromScrawl sessions)
 
 # First From Scrawl Ever! (2023-11-25 Barcelona)
 
