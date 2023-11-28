@@ -7,7 +7,9 @@ From Scrawl: https://github.com/Scrawlink/scrawlink-extension/blob/main/FromScra
 
 ADD your link
 
-**Citlali**: https://strudel.cc/?b5Vv0FjlysTb
-**Glen**: https://strudel.cc/?J8L6QAqGf35Q
-**Ámbar**: https://strudel.cc/?49IJZ9zwwrpb
+- **Citlali**: https://strudel.cc/?b5Vv0FjlysTb
+
+- **Alex**: https://strudel.cc/?J8L6QAqGf35Q
+
+- **Ámbar**: https://strudel.cc/?49IJZ9zwwrpb
 
