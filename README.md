@@ -10,3 +10,10 @@ for [Hydra](hydra.ojack.xyz/):
 and [Strudel](strudel.tidalcycles.org/):
 
 <img alt="ScrawLink screenshot with Strudel" src="./images/scrawlink%20screenshots/ss2.png" style="width:600px;">
+
+# Community
+
+You can join us on these channels:
+
+- Telegram: https://t.me/ScrawLink
+ 
