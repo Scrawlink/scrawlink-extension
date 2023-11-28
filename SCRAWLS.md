@@ -1,11 +1,6 @@
 (add here your links and  From Scrawl sessions)
 
-# First From Scrawl Ever!
-## 2023-11-25 Barcelona
-
-From Scrawl: https://github.com/Scrawlink/scrawlink-extension/blob/main/FromScrawl.js
-
-ADD your link
+# First From Scrawl Ever! (2023-11-25 Barcelona)
 
 - **Citlali**: https://strudel.cc/?b5Vv0FjlysTb
 
