@@ -29,7 +29,7 @@ let r3 = '👏 Rule 3 (Clap!): When the performance finishes, everybody claps.'
 */
 
 let i1 = '🙏IRRYD... left without sharing your code somehow. \
-You can share your scrawls here: https://github.com/Scrawlink/scrawlink-extension/blob/main/SCRAWLS.md'
+You can share your scrawls in our Telegram group: https://t.me/ScrawLink'
 
 /*
 ### 🔗 Rule 1 Implementation
