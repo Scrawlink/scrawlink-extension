@@ -44,7 +44,7 @@ let found = false;
 
 if (typeof treeWalker === 'undefined') {
 
-  window.treeWalker = document.createTreeWalker(document,NodeFilter.SHOW_TEXT);
+  window.treeWalker = document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
 
 
   let url = '';
