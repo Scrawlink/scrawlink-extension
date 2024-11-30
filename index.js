@@ -1,13 +1,17 @@
-  
+
   let iframe = document.createElement("iframe")
   iframe.id = "targetPage";
   
   iframe.height = "100%";
   iframe.width = "100%";
   iframe.src = new URL(window.location.href).searchParams.get('u')||"https://hydra.ojack.xyz/";
-  
   document.body.appendChild(iframe);
-  
+
+
+  //*** Temporary automaic redirection to linkedURL
+  window.location.replace(iframe.src);
+  //***
+
   wrapper = document.createElement("div");
   wrapper.id += "scrawlink";
   wrapper.classList.add("instructions");
