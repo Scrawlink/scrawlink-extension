@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/632906062.svg)](https://doi.org/10.5281/zenodo.15095575)
+
 # ScrawLink
 Scrawlink is a browser extension that shares your current shortened URL with a QR code.
 
